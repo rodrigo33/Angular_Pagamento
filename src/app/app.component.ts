@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MyService } from './my.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Pagamento';
+  
+  constructor(private myService:MyService){
+
+  }
+
+  ngOnInit(){
+    this.myService.getUsuario().subscribe((usuario) => {
+      console.log("Usuários:", usuario);
+    })  
+  }
+
 }
+
