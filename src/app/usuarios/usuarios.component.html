@@ -1,1 +1,25 @@
-<p>usuarios works!</p>
+<div class="topo">
+    <h3>
+        <strong>Lista de usuários</strong>
+    </h3>
+</div>
+  
+<!-- <button (click)="buscaUsuario()" >Buscar</button> -->
+
+
+<div class="usuarios" *ngFor="let resul of resultados">
+    <div class="usuario"> 
+        <div class="img">
+            <img src="{{resul.img}}" alt="usuario1" />
+        </div>    
+        <div class="texto">
+            <h3> Nome do usuário: {{resul.name}} </h3>
+            <h3>Id: {{resul.id}} Username: {{resul.username}} </h3>        
+        </div>    
+        <div class="button-box">
+            <button>Pagar</button>
+        </div>
+        
+    </div>        
+</div>
+

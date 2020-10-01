@@ -14,9 +14,9 @@ export class AppComponent {
   }
 
   ngOnInit(){
-    this.myService.getUsuario().subscribe((usuario) => {
-      console.log("Usuários:", usuario);
-    })  
+    /* this.myService.getUsuario().subscribe((usuario) => {
+      console.log("Usuários:", usuario); */
+    //})  
   }
 
 }
