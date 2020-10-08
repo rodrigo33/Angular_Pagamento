@@ -3,9 +3,6 @@
         <strong>Lista de usuários</strong>
     </h3>
 </div>
-  
-<!-- <button (click)="buscaUsuario()" >Buscar</button> -->
-
 
 <div class="usuarios" *ngFor="let resul of resultados">
     <div class="usuario"> 
@@ -17,9 +14,8 @@
             <h3>Id: {{resul.id}} Username: {{resul.username}} </h3>        
         </div>    
         <div class="button-box">
-            <button>Pagar</button>
+            <button (click)="showNotFoundModal()">Pagar</button>
         </div>
         
     </div>        
 </div>
-<app-modal></app-modal>

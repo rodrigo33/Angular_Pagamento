@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MyService, User } from 'src/app/my.service';
+import { ModalService } from 'src/app/modal.service';
 import { MatDialogRef } from '@angular/material/dialog';
 
 
@@ -9,13 +10,17 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
-
+  showDisplay:boolean
   constructor(
-    ){ }
-    // public dialogRef: MatDialogRef<ModalComponent>
+      public displays: ModalService
+    ){ 
 
+   }
+  
   ngOnInit(): void {
-    console.log("testando rota");
+    this.displays.showNotFound.subscribe((valor) => {
+      this.showDisplay = valor
+    })
   }
 
  /*  cancel() {

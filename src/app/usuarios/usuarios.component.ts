@@ -5,6 +5,8 @@ import { MyService, User } from 'src/app/my.service';
 import { MatDialog } from '@angular/material/dialog';
 
 import { ModalComponent } from 'src/app/modal/modal.component';
+import { ModalService } from 'src/app/modal.service';
+
 
 
 
@@ -15,11 +17,9 @@ import { ModalComponent } from 'src/app/modal/modal.component';
 })
 export class UsuariosComponent implements OnInit {
 
-  
-
   constructor(
     
-    public dialog:MatDialog,
+    public displays: ModalService,
     private myService:MyService) { }
 
 
@@ -30,23 +30,14 @@ export class UsuariosComponent implements OnInit {
       this.resultados = resultado;
     })
   }
+  valorModal = false
+  showNotFoundModal() {
+    this.valorModal = !this.valorModal
+    this.displays.mudarValor(this.valorModal)
+  }
+
 
   ngOnInit(): void {
     this.buscaUsuario()
   }
-
-  openDialog(item){
-    console.log(item)
-      this.myService.setUsuarioselecao(item);
-      const dialogRef = this.dialog.open(ModalComponent,{
-        width: '60%',
-        height: '60%',
-      });
-
-  dialogRef.afterClosed().subscribe(result =>{
-    console.log('fechado');
-  })    
-
-  }
-
 }
