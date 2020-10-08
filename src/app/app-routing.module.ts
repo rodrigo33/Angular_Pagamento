@@ -6,7 +6,8 @@ import { ModalComponent } from './modal/modal.component';
 
 const routes: Routes = [
   {path:"usuarios", component: UsuariosComponent},
-  {path:"modal", component: ModalComponent}
+  {path:"modal", component: ModalComponent},
+  {path:"teste", component: UsuariosComponent}
 ];
 
 @NgModule({

@@ -11,14 +11,15 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class ModalComponent implements OnInit {
 
   constructor(
-    
-    public dialogRef: MatDialogRef<ModalComponent>) { }
+    ){ }
+    // public dialogRef: MatDialogRef<ModalComponent>
 
   ngOnInit(): void {
+    console.log("testando rota");
   }
 
-  cancel() {
+ /*  cancel() {
     this.dialogRef.close();
-  }
+  } */
 
 }
