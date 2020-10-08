@@ -1,13 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-
 import { MyService, User } from 'src/app/my.service';
-
 import { MatDialog } from '@angular/material/dialog';
-
 import { ModalComponent } from 'src/app/modal/modal.component';
 import { ModalService } from 'src/app/modal.service';
-
-
+import { CartaoService, TransactionPayload } from 'src/app/cartao.service';
 
 
 @Component({
@@ -22,7 +18,6 @@ export class UsuariosComponent implements OnInit {
     public displays: ModalService,
     private myService:MyService) { }
 
-
   resultados:any=[];
   buscaUsuario(){
     this.myService.getUsuario().subscribe(resultado => {
@@ -30,6 +25,8 @@ export class UsuariosComponent implements OnInit {
       this.resultados = resultado;
     })
   }
+  
+
   valorModal = false
   showNotFoundModal() {
     this.valorModal = !this.valorModal

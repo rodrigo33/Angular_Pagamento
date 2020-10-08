@@ -2,5 +2,11 @@
   <app-usuarios></app-usuarios>
 </div> -->
 
+  <input [(ngModel)]="q" (keyup)="maskSearch($event)" (keydown)="maskSearchDown($event)" type="text" />
+  <button>Buscar</button>
+  <button (click)="showNotFoundModal()">Show</button>
+
+
+
 <router-outlet></router-outlet>
 
