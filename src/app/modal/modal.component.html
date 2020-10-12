@@ -1,6 +1,14 @@
 
 <div class="modal" [ngStyle]="{'display': !showDisplay ? 'none' : 'flex'}">
-  <p>404 not found</p>
+
+
+  <h1 ngClass='azul'>Pagamento para <span style="color: black;"></span></h1>
+  <input placeholder="R$0,00" [(ngModel)]="q" (keyup)="maskSearch($event)" (keydown)="maskSearchDown($event)" type="text" />
+  <select name="valor" id="pagamento" required>
+    <option *ngFor="let cartao of cartoes; let i = index" [ngValue]="cartao">Cartão com final {{cartao.card_number.slice(12,16)}}</option>
+  </select>
+  <button (click)="showNotFoundModal()">Pagar</button>
+
 </div>
 
 

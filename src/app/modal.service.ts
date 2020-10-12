@@ -13,7 +13,9 @@ export class ModalService {
     this.showSubject.next(false)
   }
   private showSubject: Subject<boolean>
+	
   mudarValor(valor){
+    console.log("nextteste")
     this.showSubject.next(valor)
     return valor
   }

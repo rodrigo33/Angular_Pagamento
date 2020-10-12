@@ -3,7 +3,7 @@ import { MyService, User } from 'src/app/my.service';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from 'src/app/modal/modal.component';
 import { ModalService } from 'src/app/modal.service';
-import { CartaoService, TransactionPayload } from 'src/app/cartao.service';
+import { CartaoService } from 'src/app/cartao.service';
 
 
 @Component({
@@ -29,6 +29,7 @@ export class UsuariosComponent implements OnInit {
 
   valorModal = false
   showNotFoundModal() {
+    console.log("shownotfound");
     this.valorModal = !this.valorModal
     this.displays.mudarValor(this.valorModal)
   }

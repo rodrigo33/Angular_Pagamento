@@ -1,12 +1,14 @@
 .modal{
-     display: flex;
-     position: fixed;
-     width: 300px;
-     height: 300px;
-     justify-content: center;
-     align-items: center;
-     border: solid 1px #000;
-     background:red;
-     color: white;
+    z-index: 9999;
+    display: flex;
+    position: fixed;
+    top: 10px;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px #000;
+    background: red;
+    color: white;
 
 }
