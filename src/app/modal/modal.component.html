@@ -1,14 +1,23 @@
 
 <div class="modal" [ngStyle]="{'display': !showDisplay ? 'none' : 'flex'}">
 
+<!-- <h1 ngClass='azul'>Pagamento para <span style="color: black;"></span></h1> -->
+ 
+	<!-- <div class="itensformulario">
+		<input placeholder="R$0,00" [(ngModel)]="q" (keyup)="maskSearch($event)" (keydown)="maskSearchDown($event)" type="text" />
+  </div> -->
+  <div>
+	  <label for="power" style="font-size: 30px; color: #3F51B5;"></label>
 
-  <h1 ngClass='azul'>Pagamento para <span style="color: black;"></span></h1>
-  <input placeholder="R$0,00" [(ngModel)]="q" (keyup)="maskSearch($event)" (keydown)="maskSearchDown($event)" type="text" />
-  <select name="valor" id="pagamento" required>
-    <option *ngFor="let cartao of cartoes; let i = index" [ngValue]="cartao">Cartão com final {{cartao.card_number.slice(12,16)}}</option>
-  </select>
-  <button (click)="showNotFoundModal()">Pagar</button>
+	  <select ngClass="itensselect" id="power" required>
+		  <option *ngFor="let cartao of cartoes; let i = index" [ngValue]="cartao">Cartão com final{{cartao.card_number.slice(12,16)}}</option>
+	  </select>
 
+  </div>
+ <!--  <div id="botao">
+    <button (click)="showNotFoundModal()" ngClass="botao">Pagar</button>
+  </div>
+ -->
 </div>
 
 

@@ -2,13 +2,50 @@
     z-index: 9999;
     display: flex;
     position: fixed;
-    top: 10px;
-    width: 300px;
-    height: 300px;
+    top: 15%;
+    width: 30%;
+    height: 40%;
     justify-content: center;
     align-items: center;
     border: solid 1px #000;
-    background: red;
+    background: aquamarine;
     color: white;
-
+    text-align: center;
+    left: 35%;
 }
+body {
+    margin: 0 auto;
+  }
+  
+  #formulario {
+    padding: 0%;
+  }
+  
+  .itensformulario {
+    width: 100%;
+    font-size: 30px;
+  }
+  
+  .itensselect {
+    font-size: 30px;
+    width: 100%;
+    text-align: center; 
+    text-align-last: center; 
+    border-color: #3F51B5;
+    border: none;
+  }
+  
+  
+  .azul {
+    background-color: #2F314C;
+    padding: 2%;
+    color: #fff;
+  }
+  
+  .botao {
+  margin-top: 100%;
+  margin-right: 140px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  }
